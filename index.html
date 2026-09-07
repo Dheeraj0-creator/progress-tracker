@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DK Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DK Progress Tracker</h1>
+
+    <h2>Growth</h2>
+    <div class="Growth">
+    <label>Study Hours:</label><br>
+    <input id="study" placeholder="Study Hours" type="number">
+
+    <br>
+
+    <label>Reading/Learning:</label><br>
+    <input id="learning" placeholder="Learningmin" type="number">
+    </div>
+
+    <br>
+    <h2>Health</h2>
+    <div class="Heath">
+    <label>Sleep Hours:</label><br>
+    <input id="Sleep" placeholder="sleephours" type="number">
+
+    <br>
+
+    <label>Protein Consumed:</label><br>
+    <input id="Protein" placeholder="proteinintake" type="number">
+
+    <br>
+
+    <label>Workout:</label><br>
+    <input id="Workout" placeholder="exercise" type="checkbox">
+    </div>
+
+    <br>
+    <h2>Explore</h2>
+    <div class="Explore">
+    <label>Content Creation:</label><br>
+    <input id="Content" placeholder="creation" type="checkbox">
+
+    <br>
+
+    <label>Trading</label><br>
+    <input id="Trade" placeholder="trading" type="checkbox">
+
+    <br>
+
+    <label>Bussiness:</label><br>
+    <input id="Bussiness" placeholder="build" type="checkbox">
+    </div>
+    <br>
+    <br>
+
+    <button id="saveBtn">Save Progress</button>
+    <button id="clear">Clear History</button>
+    <h2>Dashboard</h2>
+    <div class="dash">
+    <h4 class="card" id="totalStudyHours"></h4>
+    <h4 class="card" id="averageSleep"></h4>
+    <h4 class="card" id="workoutDays"></h4>
+    <h4 class="card" id="totalProtein"></h4>
+    </div>
+    <h2>Goals This Week</h2>
+    <div class="">
+        
+        <div class="Goals">
+            <div id="studyGoal" ></div>
+            <div class="progressBar" id="studyProgress"></div>
+            <div id="workoutGoal" ></div>
+            <div class="progressBar" id="workoutProgress"></div>
+            <div id="sleepTarget" ></div>
+            <div class="progressBar" id="sleepProgress"></div>
+
+    </div>
+    
+        
+    </div>
+    
+
+    <h2>History</h2>
+    <div id="history">
+
+        
+    </div>
+    <h4 id="enteries">TEST</h4>
+    <script src="script.js"></script>
+</body>
+</html>

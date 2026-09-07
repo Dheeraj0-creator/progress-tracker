@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+h1 {
+    color: blue;
+}
+.dashboard{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.card{
+    width:200px;
+    min-height:100px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:#f5f7fa;
+
+    display:flex;
+    align-items:center;
+
+    font-size:1.1rem;
+}
+.progressBar{
+    
+    height:20px;
+
+    background:#ddd;
+
+    border-radius:10px;
+
+    overflow:hidden;
+}
+#studyProgress,#workoutProgress,#sleepProgress{
+    height:100%;
+    width:0%;
+
+    background:green;
+
+    color:white;
+    text-align:center;
+    line-height:20px;
+
+    transition:0.3s;
+}
