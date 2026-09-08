@@ -2,90 +2,377 @@
 <html>
 <head>
     <title>DK Progress Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <h1>DK Progress Tracker</h1>
 
-    <h2>Growth</h2>
-    <div class="Growth">
-    <label>Study Hours:</label><br>
-    <input id="study" placeholder="Study Hours" type="number">
+<body class="min-h-screen bg-[#090b0d] text-[#edf2f0] font-sans px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
 
-    <br>
+    <!-- Header -->
+    <header class="mx-auto mb-14 max-w-6xl border-b border-[#1d292b] pb-8">
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-[#73908f]">
+            ~/progress-tracker
+        </p>
 
-    <label>Reading/Learning:</label><br>
-    <input id="learning" placeholder="Learningmin" type="number">
+        <h1 class="max-w-2xl text-4xl font-semibold tracking-tight text-[#edf2f0] sm:text-5xl">
+            DK Progress Tracker
+        </h1>
+
+        <p class="mt-3 text-sm text-[#8ea3a1] sm:text-base">
+            Daily progress, tracked locally.
+        </p>
+    </header>
+
+
+    <!-- Work -->
+    <section class="mx-auto mb-14 max-w-6xl">
+
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/work
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+
+            <div class="border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <label class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    CODE TIME
+                </label>
+
+                <input
+                    id="codeTime"
+                    placeholder="Code Hours"
+                    type="number"
+                    min="0"
+                    class="w-full border border-[#293638] bg-[#090b0d] px-3.5 py-3 font-mono text-sm text-[#edf2f0] outline-none transition focus:border-[#d6a85d] focus:ring-1 focus:ring-[#d6a85d]"
+                        >
+
+                    </div>
+                
+                
+            <div class="border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+                    
+                <label class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    QUESTIONS SOLVED
+                </label>
+                    
+                <input
+                    id="questions"
+                    placeholder="Questions Solved"
+                    type="number"
+                    min="0"
+                    class="w-full border border-[#293638] bg-[#090b0d] px-3.5 py-3 font-mono text-sm text-[#edf2f0] outline-none transition focus:border-[#d6a85d] focus:ring-1 focus:ring-[#d6a85d]"
+                        >
+                    
+            </div>
+                
+        </div>
+    </section>
+
+
+    <!-- Health -->
+    <section class="mx-auto mb-14 max-w-6xl">
+
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/health
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-3">
+
+            <div class="border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <label class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    SLEEP HOURS
+                </label>
+
+                <input
+                    id="Sleep"
+                    placeholder="Sleep Hours"
+                    type="number"
+                    min="0"
+                    class="w-full border border-[#293638] bg-[#090b0d] px-3.5 py-3 font-mono text-sm text-[#edf2f0] outline-none transition focus:border-[#d6a85d] focus:ring-1 focus:ring-[#d6a85d]"
+                >
+
+            </div>
+
+
+            <div class="border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <label class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    PROTEIN
+                </label>
+
+                <input
+                    id="Protein"
+                    placeholder="Protein Intake"
+                    type="number"
+                    min="0"
+                    class="w-full border border-[#293638] bg-[#090b0d] px-3.5 py-3 font-mono text-sm text-[#edf2f0] outline-none transition focus:border-[#d6a85d] focus:ring-1 focus:ring-[#d6a85d]"
+                >
+
+            </div>
+
+
+            <label class="flex cursor-pointer items-center justify-between border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <span class="font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    WORKOUT
+                </span>
+
+                <input
+                    id="Workout"
+                    type="checkbox"
+                    class="h-4 w-4 accent-[#d6a85d]"
+                >
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- Explore -->
+    <section class="mx-auto mb-14 max-w-6xl">
+
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/explore
+        </h2>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+
+            <label class="flex cursor-pointer items-center justify-between border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <span class="font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    CONTENT CREATION
+                </span>
+
+                <input
+                    id="Content"
+                    type="checkbox"
+                    class="h-4 w-4 accent-[#d6a85d]"
+                >
+
+            </label>
+
+
+            <label class="flex cursor-pointer items-center justify-between border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <span class="font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    TRADING
+                </span>
+
+                <input
+                    id="Trade"
+                    type="checkbox"
+                    class="h-4 w-4 accent-[#d6a85d]"
+                >
+
+            </label>
+
+
+            <label class="flex cursor-pointer items-center justify-between border border-[#1d292b] bg-[#101517] p-5 transition-colors hover:border-[#315052]">
+
+                <span class="font-mono text-xs uppercase tracking-widest text-[#8ea3a1]">
+                    BUSINESS
+                </span>
+
+                <input
+                    id="Bussiness"
+                    type="checkbox"
+                    class="h-4 w-4 accent-[#d6a85d]"
+                >
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- Actions -->
+    <div class="mx-auto mb-20 flex max-w-6xl flex-col gap-3 sm:flex-row">
+
+        <button
+            id="saveBtn"
+            class="bg-[#d6a85d] px-5 py-3 font-mono text-xs font-semibold uppercase tracking-widest text-[#090b0d] transition hover:bg-[#ebc477] focus:outline-none focus:ring-2 focus:ring-[#d6a85d] focus:ring-offset-2 focus:ring-offset-[#090b0d]"
+        >
+            Save Progress
+        </button>
+
+        <button
+            id="clear"
+            class="border border-[#293638] px-5 py-3 font-mono text-xs font-semibold uppercase tracking-widest text-[#8ea3a1] transition hover:border-[#d6a85d] hover:text-[#edf2f0] focus:outline-none focus:ring-2 focus:ring-[#d6a85d]"
+        >
+            Clear History
+        </button>
+
     </div>
 
-    <br>
-    <h2>Health</h2>
-    <div class="Heath">
-    <label>Sleep Hours:</label><br>
-    <input id="Sleep" placeholder="sleephours" type="number">
 
-    <br>
+    <!-- Dashboard -->
+    <section class="mx-auto mb-20 max-w-6xl">
 
-    <label>Protein Consumed:</label><br>
-    <input id="Protein" placeholder="proteinintake" type="number">
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/dashboard
+        </h2>
 
-    <br>
 
-    <label>Workout:</label><br>
-    <input id="Workout" placeholder="exercise" type="checkbox">
-    </div>
+        <!-- Comparison + Streak -->
+        <div class="mb-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-    <br>
-    <h2>Explore</h2>
-    <div class="Explore">
-    <label>Content Creation:</label><br>
-    <input id="Content" placeholder="creation" type="checkbox">
+            <div
+                id="weeklyComparison"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
 
-    <br>
+            <div
+                id="currentStreak"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
 
-    <label>Trading</label><br>
-    <input id="Trade" placeholder="trading" type="checkbox">
+            <div
+                id="bestStreak"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
 
-    <br>
+        </div>
 
-    <label>Bussiness:</label><br>
-    <input id="Bussiness" placeholder="build" type="checkbox">
-    </div>
-    <br>
-    <br>
 
-    <button id="saveBtn">Save Progress</button>
-    <button id="clear">Clear History</button>
-    <h2>Dashboard</h2>
-    <div class="dash">
-    <h4 class="card" id="totalStudyHours"></h4>
-    <h4 class="card" id="averageSleep"></h4>
-    <h4 class="card" id="workoutDays"></h4>
-    <h4 class="card" id="totalProtein"></h4>
-    </div>
-    <h2>Goals This Week</h2>
-    <div class="">
-        
-        <div class="Goals">
-            <div id="studyGoal" ></div>
-            <div class="progressBar" id="studyProgress"></div>
-            <div id="workoutGoal" ></div>
-            <div class="progressBar" id="workoutProgress"></div>
-            <div id="sleepTarget" ></div>
-            <div class="progressBar" id="sleepProgress"></div>
+        <!-- Main Stats -->
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-    </div>
-    
-        
-    </div>
-    
+            <div
+                id="totalStudyHours"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
 
-    <h2>History</h2>
-    <div id="history">
+            <div
+                id="totalQuestions"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
 
-        
-    </div>
-    <h4 id="enteries">TEST</h4>
+            <div
+                id="averageSleep"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
+
+
+            <div
+                id="workoutDays"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
+
+            <div
+                id="totalProtein"
+                class="min-h-36 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+            ></div>
+
+        </div>
+
+
+        <!-- Best Study Day -->
+        <div
+            id="bestStudyDay"
+            class="mt-4 min-h-24 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#edf2f0]"
+        ></div>
+
+    </section>
+
+
+    <!-- Goals -->
+    <section class="mx-auto mb-20 max-w-6xl">
+
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/goals
+        </h2>
+
+
+        <div class="space-y-7">
+
+            <div>
+
+                <div
+                    id="studyGoal"
+                    class="mb-2 font-mono text-sm text-[#edf2f0]"
+                ></div>
+
+                <div class="h-6 overflow-hidden border border-[#1d292b] bg-[#101517]">
+
+                    <div
+                        id="studyProgress"
+                        class="h-full bg-[#4e9991] text-center font-mono text-xs leading-5 text-[#081012]"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div
+                    id="workoutGoal"
+                    class="mb-2 font-mono text-sm text-[#edf2f0]"
+                ></div>
+
+                <div class="h-6 overflow-hidden border border-[#1d292b] bg-[#101517]">
+
+                    <div
+                        id="workoutProgress"
+                        class="h-full bg-[#d6a85d] text-center font-mono text-xs leading-5 text-[#081012]"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div
+                    id="sleepTarget"
+                    class="mb-2 font-mono text-sm text-[#edf2f0]"
+                ></div>
+
+                <div class="h-6 overflow-hidden border border-[#1d292b] bg-[#101517]">
+
+                    <div
+                        id="sleepProgress"
+                        class="h-full bg-[#73908f] text-center font-mono text-xs leading-5 text-[#081012]"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- History -->
+    <section class="mx-auto mb-20 max-w-6xl">
+
+        <h2 class="mb-5 font-mono text-sm uppercase tracking-[0.2em] text-[#73908f]">
+            ~/history
+        </h2>
+
+        <div
+            id="history"
+            class="min-h-32 border border-[#1d292b] bg-[#101517] p-5 font-mono text-sm leading-7 text-[#8ea3a1]"
+        ></div>
+
+        <h4
+            id="enteries"
+            class="mt-4 font-mono text-xs text-[#55706f]"
+        >
+            Total Entries: 0
+        </h4>
+
+    </section>
+
+
     <script src="script.js"></script>
+
 </body>
 </html>
